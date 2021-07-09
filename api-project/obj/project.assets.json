@@ -5810,11 +5810,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\hoang vung\\Desktop\\api-project\\api-project\\api-project.csproj",
+      "projectUniqueName": "C:\\Users\\hoang vung\\Desktop\\web-api-and-sql-sever\\api-project\\api-project.csproj",
       "projectName": "api-project",
-      "projectPath": "C:\\Users\\hoang vung\\Desktop\\api-project\\api-project\\api-project.csproj",
+      "projectPath": "C:\\Users\\hoang vung\\Desktop\\web-api-and-sql-sever\\api-project\\api-project.csproj",
       "packagesPath": "C:\\Users\\hoang vung\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\hoang vung\\Desktop\\api-project\\api-project\\obj\\",
+      "outputPath": "C:\\Users\\hoang vung\\Desktop\\web-api-and-sql-sever\\api-project\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
