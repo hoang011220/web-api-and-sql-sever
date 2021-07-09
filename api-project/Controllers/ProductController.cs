@@ -1,9 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
 using api_project.Models;
@@ -66,7 +62,61 @@ namespace api_project.Controllers
                     myCon.Close();
                 }
             }
-            return new JsonResult(table);
+            return new JsonResult("Added Successfully!!");
+
+        }
+
+        [HttpPut]
+        public JsonResult Put(Product prd)
+        {
+            string query = @"
+                update dbo.Product
+                set ProductName = @ProductName
+                where ProductId = @ProductID
+                ";
+            DataTable table = new DataTable();
+            string sqlDataSource = _configuration.GetConnectionString("ProjectApp");
+            SqlDataReader myReader;
+            using (SqlConnection myCon = new SqlConnection(sqlDataSource))
+            {
+                myCon.Open();
+                using (SqlCommand myCommand = new SqlCommand(query, myCon))
+                {
+                    myCommand.Parameters.AddWithValue("@ProductID", prd.ProductID);
+                    myCommand.Parameters.AddWithValue("@ProductName", prd.ProductName);
+                    myReader = myCommand.ExecuteReader();
+                    table.Load(myReader);
+                    myReader.Close();
+                    myCon.Close();
+                }
+            }
+            return new JsonResult("Update Successfully!!");
+
+        }
+
+        [HttpDelete("{id}")]
+        public JsonResult Delete(int id)
+        {
+            string query = @"
+                delete from dbo.Product
+                where ProductId = @ProductID
+                ";
+            DataTable table = new DataTable();
+            string sqlDataSource = _configuration.GetConnectionString("ProjectApp");
+            SqlDataReader myReader;
+            using (SqlConnection myCon = new SqlConnection(sqlDataSource))
+            {
+                myCon.Open();
+                using (SqlCommand myCommand = new SqlCommand(query, myCon))
+                {
+                    myCommand.Parameters.AddWithValue("@ProductID", id);
+                    myReader = myCommand.ExecuteReader();
+                    table.Load(myReader);
+                    myReader.Close();
+                    myCon.Close();
+                }
+            }
+            return new JsonResult("Delete Successfully!!");
 
         }
     }
