@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ANZRGobi1uEXqB515pNWHEjkGg+bvFMZfEKDbfmAUgLHbRiixdCHvf8Seq9PmguCJPV41YHf9v2H6lK/JlxMyQ==",
+  "dgSpecHash": "H0FzDkSyXvGRNu/1kfOdQQm04Aavo8/48bfLlPgh99piQa4rYoYMA6UYmyE3Ke/wWk5dmPD+kRD0VcbHnE4/5g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\hoang vung\\Desktop\\api-project\\api-project\\api-project.csproj",
+  "projectFilePath": "C:\\Users\\hoang vung\\Desktop\\web-api-and-sql-sever\\api-project\\api-project.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hoang vung\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\5.0.7\\microsoft.aspnetcore.jsonpatch.5.0.7.nupkg.sha512",
     "C:\\Users\\hoang vung\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\5.0.7\\microsoft.aspnetcore.mvc.newtonsoftjson.5.0.7.nupkg.sha512",
